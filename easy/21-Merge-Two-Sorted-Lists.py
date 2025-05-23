@@ -1,12 +1,12 @@
-def mergeTwoLists(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+def merge_two_lists(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
     if not l1 or not l2:
         return l1 or l2
 
     if l1.val < l2.val:
-        l1.next = mergeTwoLists(l1.next, l2)
+        l1.next = merge_two_lists(l1.next, l2)
         return l1
     else:
-        l2.next = mergeTwoLists(l1, l2.next)
+        l2.next = merge_two_lists(l1, l2.next)
         return l2
 
 
