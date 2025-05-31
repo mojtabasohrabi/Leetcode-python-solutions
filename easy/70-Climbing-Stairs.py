@@ -1,4 +1,4 @@
-def climb_stairs(self, n: int) -> int:
+def climb_stairs(n: int) -> int:
     if n <= 1:
         return 1
 
